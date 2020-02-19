@@ -1,8 +1,8 @@
 public class QuickUnion {
     private int[] id;
-    public static void main(String[] args) {
+
+    public static void main(String[] args ){
         QuickUnion qu = new QuickUnion(10);
-        qu.unite(p, q);
     }
 
     public QuickUnion(int N) {
@@ -14,11 +14,12 @@ public class QuickUnion {
         while (i != id[i]) i = id[i];
         return i;
     }
-    public boolean find(int p, int q) {
+
+    public boolean connected(int p, int q) {
         return root(p) == root(q);
     }
 
-    public void unite(int p, int q) {
+    public void union(int p, int q) {
         int i = root(p);
         int j = root(q);
         id[i] = j;
